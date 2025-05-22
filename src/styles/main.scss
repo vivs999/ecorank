@@ -1,0 +1,78 @@
+@import "~bootstrap/scss/bootstrap";
+
+:root {
+  --primary-color: #2e7d32;
+  --secondary-color: #81c784;
+  --accent-color: #1b5e20;
+  --light-bg: #f1f8e9;
+  --dark-text: #333;
+  --light-text: #fff;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  margin: 0;
+  padding: 0;
+}
+
+.btn-eco {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+  &:hover {
+    background-color: var(--accent-color);
+  }
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  color: var(--light-text);
+}
+
+.challenge-card {
+  border-left: 4px solid var(--primary-color);
+  transition: transform 0.2s;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  &.locked {
+    opacity: 0.7;
+    border-left-color: #aaa;
+  }
+}
+
+.leaderboard-item {
+  transition: background-color 0.3s;
+  
+  &:hover {
+    background-color: rgba(129, 199, 132, 0.2);
+  }
+  
+  &.user {
+    background-color: rgba(129, 199, 132, 0.4);
+    font-weight: bold;
+  }
+}
+
+.badge-eco {
+  background-color: var(--secondary-color);
+  color: var(--dark-text);
+}
+
+.intro-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.7)), var(--light-bg);
+  background-size: cover;
+  background-position: center;
+} 
